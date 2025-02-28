@@ -1,3 +1,4 @@
+import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
 
 const App = () => {
@@ -5,6 +6,7 @@ const App = () => {
     <>
     <main className="overflow-x-hidden">
       <Navbar/>
+      <Hero/>
     </main>
     </>
   )

@@ -3,6 +3,7 @@ import { FaLeaf } from 'react-icons/fa';
 import { MdMenu } from 'react-icons/md';
 import { DataMenu } from '../../data/DataMenu';
 import ResponsiveMenu from '../ResponsiveMenu';
+import { motion} from 'framer-motion'
 
 const Navbar = () => {
 
@@ -23,7 +24,11 @@ const Navbar = () => {
   return (
     <>
     <nav>
-      <div className="container flex items-center justify-between py-4 md:pt-4">
+      <motion.div
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
+      transition={{ delay: 0.5, duration: 0.5}}
+      className="container flex items-center justify-between py-4 md:pt-4">
         {/* Logo Section */}  
         <div className='text-2xl flex items-center gap-2 font-bold uppercase'>
           <p className='text-primary'>Fruit</p>
@@ -44,7 +49,7 @@ const Navbar = () => {
         <div className="md:hidden" onClick={() => setOpen(!open)}>
           <MdMenu className='text-4xl'/>
        </div>
-      </div>
+      </motion.div>
     </nav>
 
     {/* Mobile Menu */}
