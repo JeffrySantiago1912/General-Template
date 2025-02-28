@@ -1,7 +1,14 @@
+import Hero from "./components/Hero/Hero"
+import Navbar from "./components/Navbar/Navbar"
 
 const App = () => {
   return (
-    <div className="bg-red-500">General Template</div>
+    <>
+    <main className="overflow-x-hidden">
+      <Navbar/>
+      <Hero/>
+    </main>
+    </>
   )
 }
 
